@@ -45,7 +45,7 @@ class ArduinoCom(Node):
         x, y, theta = self.read_xyz()
         if x is not None and y is not None and theta is not None:
             msg = Float32MultiArray()
-            msg.data = [x, y, z]
+            msg.data = [x, y, theta]
             self.pub.publish(msg)
 
 def main(args=None):
